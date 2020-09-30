@@ -63,7 +63,7 @@ def main():
                              names=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'trades'],
                              usecols=['timestamp', 'open', 'high', 'low','close', 'volume']
                              )
-
+            df.timestamp = df.timestamp * 1000
             export_json(df,
                         currency=components["currency"],
                         quote_currency=components["quote_currency"],
